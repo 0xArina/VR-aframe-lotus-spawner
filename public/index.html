@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aframe_Assignment2</title>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-assets>
+        <a-asset-item id="table-obj" src="assets/models/tableWithTablecloth.obj"></a-asset-item>
+        <a-asset-item id="table-mtl" src="assets/textures/tableWithTablecloth.mtl"></a-asset-item>
+        <a-asset-item id="chair-obj" src="assets/models/cafe_set_tonon_chair.obj"></a-asset-item>
+        <a-asset-item id="chair-mtl" src="assets/textures/cafe_set_tonon_chair.mtl"></a-asset-item>
+    </a-assets>
+    <a-entity   id="ground"
+                rotation="-90 0 0"
+                geometry="primitive:plane; width:10; height:10"
+                material ="color:#7BC8a4">
+    </a-entity>
+   <!--<a-entity   obj-model="obj: #tableWithCloth;"  
+                id="table" 
+                position="0 1.0, -2.0"
+                gltf-model="#tableWithCloth"> --> 
+    <a-entity   obj-model="obj: #table-obj; mtl: #table-mtl"
+                scale="0.01 0.01 0.01"
+                rotation="0 0 0"  
+                position="-1.5 0 -3.25"> <!--horizon height vertical -->
+    </a-entity>
+    <a-entity   obj-model="obj: #chair-obj; mtl: #chair-mtl"
+                scale="0.015 0.015 0.015"
+                rotation="0 0 0"  
+                position="-0.420 0 -4.065"> <!--horizon height vertical -->
+</a-entity>
+</a-entity>
+</a-scene>
+</body>
+</html>
