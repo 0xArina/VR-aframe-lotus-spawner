@@ -11,6 +11,8 @@
         <a-asset-item id="table-mtl" src="assets/textures/tableWithTablecloth.mtl"></a-asset-item>
         <a-asset-item id="chair-obj" src="assets/models/cafe_set_tonon_chair.obj"></a-asset-item>
         <a-asset-item id="chair-mtl" src="assets/textures/cafe_set_tonon_chair.mtl"></a-asset-item>
+        <a-asset-item id="male-obj" src="assets/models/sitMale01.obj"></a-asset-item>
+        <a-asset-item id="male-mtl" src="assets/textures/sitMale01.mtl"></a-asset-item>
     </a-assets>
     <a-entity   id="ground"
                 rotation="-90 0 0"
@@ -30,8 +32,12 @@
                 scale="0.015 0.015 0.015"
                 rotation="0 0 0"  
                 position="-0.420 0 -4.065"> <!--horizon height vertical -->
-</a-entity>
-</a-entity>
+    </a-entity>
+    <a-entity   obj-model="obj: #male-obj; mtl: #male-mtl"
+                scale="0.015 0.015 0.015"
+                rotation="0 0 0"  
+                position="-0.420 0 -4.065"> <!--horizon height vertical -->
+    </a-entity>
 </a-scene>
 </body>
 </html>
