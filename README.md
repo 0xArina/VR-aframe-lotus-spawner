@@ -1,4 +1,4 @@
-# Aframe_interactions_2.0
+# Aframe Interactions
 Assignment 2 - Multi-Platform Interaction
 
 <b>OVERVIEW</b>
