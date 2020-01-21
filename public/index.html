@@ -13,6 +13,8 @@
         <a-asset-item id="chair-mtl" src="assets/textures/cafe_set_tonon_chair.mtl"></a-asset-item>
         <a-asset-item id="male-obj" src="assets/models/sitMale01.obj"></a-asset-item>
         <a-asset-item id="male-mtl" src="assets/textures/sitMale01.mtl"></a-asset-item>
+        <a-asset-item id="greenhouse-obj" src="assets/models/greenhouse.obj"></a-asset-item>
+        <a-asset-item id="greenhouse-mtl" src="assets/textures/greenhouse.mtl"></a-asset-item>
     </a-assets>
     <!-- environment -->
     <a-entity environment="preset: contact; groundColor: #445; grid: 1x1"></a-entity>
@@ -46,8 +48,14 @@
                 geometry="primitive:cylinder; radius:0.4; height: 0.1;"
                 material="color:rgb(255,200,100)"
                 scale="0.606 2.117 0.606"
-                position="-1.248 0.881 -3.179">
+                position="-1.259 0.881 -3.226">
     </a-entity >
+    <a-entity   id="greenhouse"
+                obj-model="obj: #greenhouse-obj; mtl: #greenhouse-mtl"
+                scale="0.01 0.01 0.01"
+                rotation="0 0 0"  
+                position="0 0 -17.398"> <!--horizon height vertical -->
+    </a-entity>
 
 </a-scene>
 </body>
