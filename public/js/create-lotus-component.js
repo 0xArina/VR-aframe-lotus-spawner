@@ -33,12 +33,12 @@ AFRAME.registerComponent('create-lotus-component',{
         lotusElem.setAttribute('class', 'clickable');
         lotusElem.setAttribute('obj-model', {obj: 'assets/models/lotus_OBJ_high.obj'});
         lotusElem.setAttribute('material', {src:'assets/textures/lotus_petal_diffuse.jpg'});
-        lotusElem.setAttribute('delete-cow-component',{});
+        lotusElem.setAttribute('delete-lotus-component',{});
 
         //random transforms
         lotusElem.setAttribute('position', {x:(Math.random()*6.0) - 3.0, y:0, z:-4.0 - (Math.random()*3.0)});
-        const randScale = 0.2 + (Math.random()*0.2);
-        lotusElem.setAttribute('scale', {x:randScale, y:randScale, z:randScale}); //random scale
+       // const randScale = ((Math.random() * 1.0)-0.6);
+        lotusElem.setAttribute('scale', {x:0.3, y:0.3, z:0.3}); //random scale
         lotusElem.setAttribute('rotation', {x:0, y:Math.random()* 360.0, z:0}); //random y rotation
 
         //last step is to attach to scne
