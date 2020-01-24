@@ -24,10 +24,13 @@ AFRAME.registerComponent('delete-lotus-component',{
             Context_AF.el.object3D.scale.set(0.3, 0.3, 0.3);
         });  
     },
-   deleteMyself : function(){
+    menu: function(){ },
+    deleteMyself : function(){
        //defenition
        const Context_AF = this;
        //only a parentNode can delete childNodes    
        Context_AF.el.parentNode.removeChild(Context_AF.el);  
    }
 });
+
+//click -> ask to pick up , delete or release
