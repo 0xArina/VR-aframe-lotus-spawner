@@ -1,19 +1,18 @@
-const express   = require('express'); //create constant called express 
-                                    //equals to text of class?
-                                    //get that code
-const app       = express();          //initialize 
-const http      = require('http');   //go get it
-const server    = http.createServer(app);      //initialize
-const PORT      = 1111; //which prt is our context servedf by (default:80)
+const express   = require('express');
+const app       = express();          
+const http      = require('http'); 
+const server    = http.createServer(app);  
+const PORT      = 8080; 
  
 server.listen(PORT);
-//our default directory
+
+//default directory
 app.use ( express.static(__dirname + '/public') );
 
-//print to terminal i.e. court, printf
-console.log("Listening to port" + PORT);
+//print port number to terminal
+console.log("Listening to port: " + PORT);
 
-//set our route(s)
+//set route(s)
 app.get('/', function (req, res){
     res.sendFile(__dirname + '/public/index.html');
 });

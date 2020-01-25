@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Aframe_Assignment2</title>
-    <!-- aframe -->
+    <!-- loading aframe scripts -->
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
      <!-- environment -->
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
@@ -14,32 +14,40 @@
 <body>
 <a-scene>
     <a-assets>
-    <!-- models -->
+        <!--loading 3D models -->
         <a-asset-item id="table-obj" src="assets/models/kitchenCabinet.obj"></a-asset-item>
         <a-asset-item id="chair-obj" src="assets/models/cafe_set_tonon_chair.obj"></a-asset-item>
         <a-asset-item id="chair-mtl" src="assets/textures/cafe_set_tonon_chair.mtl"></a-asset-item>
         <a-asset-item id="male-obj" src="assets/models/sitMale01.obj"></a-asset-item>
         <a-asset-item id="male-mtl" src="assets/textures/sitMale01.mtl"></a-asset-item>
+        <a-asset-item id="arrow-obj" src="assets/models/arrow.obj"></a-asset-item>
+        <a-asset-item id="arrow-mtl" src="assets/textures/arrow.mtl"></a-asset-item>
+        <!-- loading sound -->
+        <audio id="bgMusic" src="assets/sounds/bgMusic.mp3" preload="auto" ></audio>
     </a-assets>
+    <!-- sound-->
+    <a-entity sound="src: #bgMusic; autoplay:true;"></a-entity>
     <!-- environment -->
     <a-entity environment="preset: contact; groundColor: #445; grid: 1x1"></a-entity>
     <!-- camera -->
     <a-entity position="0 1.6 0" camera wasd-controls look-controls></a-entity>
     <!-- lights -->
      <a-entity position="0 1.5 0" light="type:point; intensity:1.3;"></a-entity>
-    <!-- models presented -->
+    <!-- positioning 3D models -->
     <a-entity   id="table"
                 obj-model="obj: #table-obj"
                 scale="1 1 1"
                 rotation="0 0 0"  
                 position="-1.675 0.627 -3.250"> 
     </a-entity>
-    <a-entity   obj-model="obj: #chair-obj; mtl: #chair-mtl"
+    <a-entity   id="chair"
+                obj-model="obj: #chair-obj; mtl: #chair-mtl"
                 scale="0.015 0.015 0.015"
                 rotation="0 0 0"  
                 position="-0.420 0 -4.065">
     </a-entity>
-    <a-entity   obj-model="obj: #male-obj; mtl: #male-mtl"
+    <a-entity   id="human"
+                obj-model="obj: #male-obj; mtl: #male-mtl"
                 scale="0.015 0.015 0.015"
                 rotation="0 0 0"  
                 position="-0.420 0 -4.065"> 
@@ -52,9 +60,21 @@
                 scale="0.606 2.117 0.606"
                 position="-1.259 0.881 -3.226">
     </a-entity >
+    <a-entity   id="arrow"
+                obj-model="obj: #arrow-obj;  mtl: #arrow-mtl"
+                scale="0.378 0.378 0.378"
+                rotation="0 0 0"  
+                position="-1.250 1.144 -3.250"
+                animation=" property: position; 
+                            to: -1.250 1.270 -3.250; 
+                            dur: 1300; 
+                            loop: true; 
+                            dir: alternate;
+                            easing: linear"> 
+    </a-entity>
      <!-- adding camera mannually so we add a cursor component to it -->
      <a-entity position="0 1.2 2" camera look-controls wasd-controls>
-        <!-- cursor allows us to interact with objects. Add a raycaster and set constraints too increase perfomance
+        <!-- cursor allows us to interact with objects. Add a raycaster and set constraints to increase perfomance
         which entities will trigger the raycaster. E.g. set objects to the classname .clickable to only trigger entities
         with clickable as a class -->
         <a-entity   cursor="rayOrigin:mouse;"
