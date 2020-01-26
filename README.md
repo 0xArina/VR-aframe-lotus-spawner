@@ -1,4 +1,4 @@
-# Aframe Interactions: Assignment 2 
+# Aframe Interactions
 IMD3901 Winter 2020 at Carleton University <br>
 Instructor: Anthony Scavarelli <br>
 
