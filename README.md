@@ -1,5 +1,5 @@
 # Aframe Interactions
-Design Studio 3, assignment 2
+Lotus Spawner
 
 Requirements:<br>
 • A-Frame component for instantiating virtual elements <br>
