@@ -1,7 +1,7 @@
-# Aframe Interactions
+# VR Aframe Interactions
 Lotus Spawner
 
-Requirements:<br>
+<br>
 • A-Frame component for instantiating virtual elements <br>
 • A-Frame component for destroying virtual elements <br>
 • A-Frame component that allows for selection, manipulation, and release (e.g. picking up and rotating)<br>
